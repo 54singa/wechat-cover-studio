@@ -1,6 +1,6 @@
 # WeChat Cover Studio
 
-一个专门生成和修改微信公众号横版封面的 Codex skill。
+一个专门生成和修改微信公众号横版封面的 **ChatGPT + Codex 双兼容 Skill**。
 
 你只需要提供 **产品 Logo + 主标题 + 副标题**，再按需提供一张背景参考图或一句视觉方向描述，它就会结合产品气质、文章主题和历史优质案例，直接生成一张可用的 **2.35:1 公众号封面**。
 
@@ -26,7 +26,29 @@
 - 在现有封面基础上局部修改，例如纠正文字、调整字号、移动 Logo 或替换背景。
 - 根据历史正反例检查错字、多余文字、字号失衡、Logo 变形和“AI 味过重”等常见问题。
 
-## 安装
+## 安装与调用
+
+### 在 ChatGPT 中安装
+
+ChatGPT 不会因为 GitHub 仓库公开就自动安装 Skill；需要首次上传一次 Skill 压缩包。安装完成后，它会保存在你的 ChatGPT Skills 列表里，以后无需再次粘贴 GitHub 链接。
+
+1. 下载仓库 Release 中的 `wechat-cover-studio.zip`。
+2. 在 ChatGPT 侧边栏进入 **Plugins（插件）**，打开 **Skills（技能）** 标签页。
+3. 选择 **Create（创建）→ Upload from your computer（从计算机上传）**，上传压缩包。
+4. 扫描并安装完成后，可以在技能列表中直接选中“公众号封面工作室”，也可以在对话中输入 `$wechat-cover-studio` 调用。
+
+安装后可直接这样使用：
+
+```text
+使用 $wechat-cover-studio 做一张公众号封面。
+主标题：……
+副标题：……
+Logo 和背景参考见附件。
+```
+
+> ChatGPT Skills 的可用性取决于账号套餐、工作区设置和当前产品开放范围。如果界面里没有 Plugins / Skills 或 Upload 入口，需要由工作区管理员开启相应权限。
+
+### 在 Codex 中安装
 
 将仓库克隆或下载到 Codex 的 skills 目录：
 
@@ -34,7 +56,13 @@
 git clone https://github.com/54singa/wechat-cover-studio.git ~/.codex/skills/wechat-cover-studio
 ```
 
-重新打开 Codex 后，通过 `$wechat-cover-studio` 调用。
+重新打开 Codex 后，通过 `$wechat-cover-studio` 调用；安装后也可以在适合的封面任务中自动触发。
+
+### 双端共用方式
+
+仓库根目录的 `SKILL.md` 是 ChatGPT 和 Codex 共用的核心指令，`references/` 中的案例、完整提示词与正反例也会一同打包。`agents/openai.yaml` 提供技能列表中的展示名称、简介、默认调用语句与自动触发策略。
+
+同一个压缩包可以上传到 ChatGPT，也可以解压到 Codex 的 skills 目录，无需维护两套提示词。
 
 ## 推荐用法
 
