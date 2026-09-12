@@ -32,7 +32,7 @@
 
 ChatGPT 不会因为 GitHub 仓库公开就自动安装 Skill；需要首次上传一次 Skill 压缩包。安装完成后，它会保存在你的 ChatGPT Skills 列表里，以后无需再次粘贴 GitHub 链接。
 
-1. 下载仓库 Release 中的 `wechat-cover-studio.zip`。
+1. 下载 [ChatGPT / Codex 通用安装包 `wechat-cover-studio.zip`](https://github.com/54singa/wechat-cover-studio/releases/latest/download/wechat-cover-studio.zip)。
 2. 在 ChatGPT 侧边栏进入 **Plugins（插件）**，打开 **Skills（技能）** 标签页。
 3. 选择 **Create（创建）→ Upload from your computer（从计算机上传）**，上传压缩包。
 4. 扫描并安装完成后，可以在技能列表中直接选中“公众号封面工作室”，也可以在对话中输入 `$wechat-cover-studio` 调用。
@@ -46,7 +46,7 @@ ChatGPT 不会因为 GitHub 仓库公开就自动安装 Skill；需要首次上�
 Logo 和背景参考见附件。
 ```
 
-> ChatGPT Skills 的可用性取决于账号套餐、工作区设置和当前产品开放范围。如果界面里没有 Plugins / Skills 或 Upload 入口，需要由工作区管理员开启相应权限。
+> ChatGPT Skills 的可用性取决于账号套餐、工作区设置和当前产品开放范围。如果界面里没有 Plugins / Skills 或 Upload 入口，需要由工作区管理员开启相应权限。具体入口与权限说明见 [OpenAI 官方的 ChatGPT Skills 指南](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)。
 
 ### 在 Codex 中安装
 
